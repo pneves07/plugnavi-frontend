@@ -1,0 +1,11 @@
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+  
+  .icon-container  ion-icon {
+    font-size: 30px; /* Define o tamanho dos ícones */
+    margin-right: 10px; /* Adiciona um espaço entre os ícones */
+  }

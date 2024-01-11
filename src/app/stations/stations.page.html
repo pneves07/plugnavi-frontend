@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Postos
+    </ion-title>
+    <ion-progress-bar *ngIf="loadingStations"  type="indeterminate"></ion-progress-bar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="postosCarregamento">
+    <ion-item *ngFor="let posto of postosCarregamento" (click)="navegarParaPaginaDestino(posto)">
+      <ion-label>
+        <h2>{{ posto.name }}</h2>
+        <p style="font-size: smaller;">
+          {{ calcularDistancia(
+            this.localizacaoAtual.coords.latitude, 
+            this.localizacaoAtual.coords.longitude,
+            posto.stationLatitude,
+            posto.stationLongitude
+            )
+          }} Km
+        </p>
+      </ion-label>
+      <ion-icon slot="end" name="chevron-forward"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <!--
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>-->
+    <ion-title>
+      Iniciar Sessão
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-grid>
+
+    <ion-row style="margin-top: 10%;">
+      <ion-fab horizontal="center">
+        <ion-fab-button color="medium">
+          <ion-icon name="person"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-row>
+    
+    <ion-row  ow class="ion-align-items-center ion-justify-content-center" style="margin-top: 15%; padding: 5%;">
+      <ion-col size="12" size-md="6" class="ion-text-center">
+        <ion-item>
+          <ion-input [(ngModel)]="model.username" required label="Username" labelPlacement="floating" type="text"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-input [(ngModel)]="model.password" required label="Password" labelPlacement="floating" type="{{ hidePassword ? 'password' : 'text' }}"></ion-input>
+          <ion-button fill="clear" color="medium"  slot="end" aria-label="Show/hide" (click)="togglePasswordVisibility()">
+            <ion-icon slot="icon-only" name="{{ hidePassword ? 'eye-off' : 'eye' }}" aria-hidden="true"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-button expand="block" shape="round" (click)="login()" style="margin-top: 5%; padding: 10%;">Iniciar Sessão</ion-button>
+
+    <div class="ion-text-center">
+      Não tem conta?
+      <br>
+      <ion-button color="medium" shape="round" style="padding: 5%;" routerLink="/register">Registar</ion-button>
+    </div>
+
+      
+
+  </ion-grid>
+
+  <ion-toast trigger="failed-login" [duration]="5000"></ion-toast>
+  <ion-toast trigger="success-login" [duration]="5000"></ion-toast>
+
+
+
+</ion-content>

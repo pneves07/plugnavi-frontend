@@ -1,0 +1,164 @@
+{
+  "postos_carregamento": [
+    {
+      "ID": 1,
+      "Nome": "Posto A",
+      "Longitude": -9.1455,
+      "Latitude": 38.7369,
+      "Estado": "Ativo",
+      "NPostos": 5
+    },
+    {
+      "ID": 2,
+      "Nome": "Posto B",
+      "Longitude": -8.6109,
+      "Latitude": 41.1496,
+      "Estado": "Desligado",
+      "NPostos": 3
+    },
+    {
+      "ID": 3,
+      "Nome": "Posto C",
+      "Longitude": -7.5513,
+      "Latitude": 37.2719,
+      "Estado": "Manutenção",
+      "NPostos": 2
+    },
+    {
+      "ID": 4,
+      "Nome": "Posto D",
+      "Longitude": -6.2676,
+      "Latitude": 39.3999,
+      "Estado": "Sem Info",
+      "NPostos": 4
+    },
+    {
+      "ID": 5,
+      "Nome": "Posto E",
+      "Longitude": -8.6724,
+      "Latitude": 40.2033,
+      "Estado": "Ativo",
+      "NPostos": 6
+    },
+    {
+      "ID": 6,
+      "Nome": "Posto F",
+      "Longitude": -9.1393,
+      "Latitude": 38.7223,
+      "Estado": "Desligado",
+      "NPostos": 1
+    },
+    {
+      "ID": 7,
+      "Nome": "Posto G",
+      "Longitude": -7.9147,
+      "Latitude": 37.0902,
+      "Estado": "Manutenção",
+      "NPostos": 3
+    },
+    {
+      "ID": 8,
+      "Nome": "Posto H",
+      "Longitude": -6.9804,
+      "Latitude": 38.7669,
+      "Estado": "Sem Info",
+      "NPostos": 2
+    },
+    {
+      "ID": 9,
+      "Nome": "Posto I",
+      "Longitude": -8.6175,
+      "Latitude": 41.1496,
+      "Estado": "Ativo",
+      "NPostos": 4
+    },
+    {
+      "ID": 10,
+      "Nome": "Posto J",
+      "Longitude": -9.1306,
+      "Latitude": 38.7220,
+      "Estado": "Desligado",
+      "NPostos": 5
+    },
+    {
+      "ID": 11,
+      "Nome": "Posto K",
+      "Longitude": -7.5500,
+      "Latitude": 37.2750,
+      "Estado": "Manutenção",
+      "NPostos": 1
+    },
+    {
+      "ID": 12,
+      "Nome": "Posto L",
+      "Longitude": -6.2700,
+      "Latitude": 39.4000,
+      "Estado": "Sem Info",
+      "NPostos": 3
+    },
+    {
+      "ID": 13,
+      "Nome": "Posto M",
+      "Longitude": -8.6725,
+      "Latitude": 40.2050,
+      "Estado": "Ativo",
+      "NPostos": 2
+    },
+    {
+      "ID": 14,
+      "Nome": "Posto N",
+      "Longitude": -9.1395,
+      "Latitude": 38.7225,
+      "Estado": "Desligado",
+      "NPostos": 4
+    },
+    {
+      "ID": 15,
+      "Nome": "Posto O",
+      "Longitude": -7.9150,
+      "Latitude": 37.0950,
+      "Estado": "Manutenção",
+      "NPostos": 5
+    },
+    {
+      "ID": 16,
+      "Nome": "Posto P",
+      "Longitude": -6.9810,
+      "Latitude": 38.7670,
+      "Estado": "Sem Info",
+      "NPostos": 1
+    },
+    {
+      "ID": 17,
+      "Nome": "Posto Q",
+      "Longitude": -8.6180,
+      "Latitude": 41.1500,
+      "Estado": "Ativo",
+      "NPostos": 3
+    },
+    {
+      "ID": 18,
+      "Nome": "Posto R",
+      "Longitude": -9.1310,
+      "Latitude": 38.7220,
+      "Estado": "Desligado",
+      "NPostos": 2
+    },
+    {
+      "ID": 19,
+      "Nome": "Posto S",
+      "Longitude": -7.5510,
+      "Latitude": 37.2760,
+      "Estado": "Manutenção",
+      "NPostos": 6
+    },
+    {
+      "ID": 20,
+      "Nome": "Posto T",
+      "Longitude": -6.2710,
+      "Latitude": 39.4010,
+      "Estado": "Sem Info",
+      "NPostos": 4
+    }
+  ]
+}

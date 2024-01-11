@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Testes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+
+  <ion-item >
+    <ion-icon aria-hidden="true" name="search" slot="start"></ion-icon>
+    <ion-label position="floating">Pesquisar..</ion-label>
+    <ion-input [(ngModel)]="enderecoPesquisa" (ionInput)="buscarSugestoes()"></ion-input>
+  </ion-item>
+
+  <ion-list *ngIf="sugestoes.length > 0">
+    <ion-item button *ngFor="let sugestao of sugestoes" (click)="selecionarSugestao(sugestao)">
+      {{ sugestao.place_name }}
+    </ion-item>
+  </ion-list>
+
+  <div id="map" style="height: 400px;"></div> <!-- Container para o Mapa -->
+</ion-content>

@@ -1,0 +1,19 @@
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+
+  ion-avatar {
+    margin-right: 20px;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  p {
+    margin: 5px 0;
+  }
+}

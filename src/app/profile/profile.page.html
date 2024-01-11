@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Perfil
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card>
+      <ion-card-header style="text-align: center;">
+        <ion-card-title >{{user.normalizedUserName}}</ion-card-title>
+        <br>
+        <ion-card-subtitle>{{user.normalizedEmail}}</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+
+    <ion-item lines="none">
+      <ion-select label="Veículo" placeholder="Selecionar" [(ngModel)]="selectedVehicle" (ionChange)="changeVehicle()">
+        <ion-select-option *ngFor="let vehicle of vehicles;" [value]="vehicle">{{vehicle.model}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+    <div class="ion-text-center">
+      <ion-button color="medium" (click)="showFormVehicle()" shape="round" style="padding: 5%;">
+        <ion-icon *ngIf="!openAddVehicle" name="add-outline"></ion-icon>
+        <ion-icon *ngIf="openAddVehicle" name="close-outline"></ion-icon>
+      </ion-button>
+    </div>
+      
+    <div class="ion-text-center" *ngIf="openAddVehicle">
+      <form #vehicleForm="ngForm">
+        <ion-item>
+          <ion-input [(ngModel)]="newVehicle.Model" name="model" required label="Modelo" labelPlacement="floating" type="text"></ion-input>
+        </ion-item>  
+        <ion-item>
+          <ion-input [(ngModel)]="newVehicle.Autonomy" name="autonomy" required label="Autonomia" labelPlacement="floating" type="number"></ion-input>
+        </ion-item> 
+        <ion-item>
+          <ion-select [(ngModel)]="connectorType" name="connector" label="Connector" labelPlacement="floating" required>
+            <ion-select-option *ngFor="let chargingPointType of listChargingPointTypes" [value]="chargingPointType">
+              {{ chargingPointType.slot }}
+            </ion-select-option>
+          </ion-select>
+        </ion-item>
+
+      <ion-button shape="round" style="padding: 5%;" [disabled]="!vehicleForm.valid" (click)="addNewVehicle()"><ion-icon name="checkmark-outline"></ion-icon></ion-button>
+    </form>
+    </div>
+
+    <div >
+      
+    </div>
+    
+
+</ion-content>

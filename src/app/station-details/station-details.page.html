@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Detalhes 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="dataReady">
+
+
+    <div class="ion-text-center" style="margin-top: 10%;">
+        <h2>{{details.name}}</h2>
+        <h2>
+          {{distance}} Km
+        </h2>
+        <ion-item-divider>
+        </ion-item-divider>
+        <h6>Nº de Postos: </h6>
+        <h6>Conectores Disponíveis: </h6>
+        <ion-button (click)="saveToStorage(details)" style="padding-top: 5%;" shape="round">Definir Destino</ion-button>
+    </div>
+
+
+
+
+
+    <hr>
+
+    <div class="ion-text-center">
+      <h2>Reviews</h2>
+      <ion-button *ngIf="!showReviewForm" (click)="showReviewForm = true;" size="small" color="medium" shape="round">+</ion-button>
+      <ion-button *ngIf="showReviewForm" (click)="showReviewForm = false;" size="small" color="medium" shape="round">x</ion-button>
+    </div>
+
+
+
+    <div class="ion-text-center" *ngIf="showReviewForm" style="padding: 5%;">
+      <div class="icon-container text-center" style="margin-top: 10%;" >
+        <ion-icon style="color: goldenrod;" name={{nameStar1}} (click)="changeRating(1)"></ion-icon>
+        <ion-icon style="color: goldenrod;" name={{nameStar2}} (click)="changeRating(2)"></ion-icon>
+        <ion-icon style="color: goldenrod;" name={{nameStar3}} (click)="changeRating(3)"></ion-icon>
+        <ion-icon style="color: goldenrod;" name={{nameStar4}} (click)="changeRating(4)"></ion-icon>
+        <ion-icon style="color: goldenrod;" name={{nameStar5}} (click)="changeRating(5)"></ion-icon>
+      </div>
+      <br>
+      <form #reviewForm="ngForm">
+        <!--
+        <ion-item>
+          <ion-input [(ngModel)]="reviewRating" name="Rating" required label="Rating" labelPlacement="floating" type="number"></ion-input>
+        </ion-item>  
+        -->
+        <ion-item>
+          <ion-textarea [autoGrow]="true" [(ngModel)]="newReview.comment" name="Comment" required label="Comentário" labelPlacement="floating" type="text"></ion-textarea>
+        </ion-item> 
+      <ion-button (click)="addNewReview(newReview)" shape="round" style="padding: 5%;" [disabled]="!reviewForm.valid"><ion-icon name="checkmark-outline"></ion-icon></ion-button>
+      </form>
+    </div>
+
+
+      
+
+
+
+  
+</ion-content>
